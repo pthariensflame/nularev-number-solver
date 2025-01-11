@@ -1,6 +1,6 @@
 name = "NularevNumberSolver"
 uuid = "22b3410d-5569-45ff-991e-a83460af1310"
-authors = ["Laine Taffin Altman <alexanderaltman@me.com> and contributors"]
+authors = ["Laine Taffin Altman <alexanderaltman@me.com>"]
 version = "1.0.0-DEV"
 
 [compat]
