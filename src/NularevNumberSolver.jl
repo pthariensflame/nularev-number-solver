@@ -34,6 +34,7 @@ Base.one(::Type{SumOfTerms}) = SumOfTerms(Term())
 Base.iszero(terms::SumOfTerms)::Bool = isempty(terms.terms)
 Base.isone(terms::SumOfTerms)::Bool =
  isone(length(terms.terms)) && isone(only(terms.terms))
+Base.convert(::Type{SumOfTerms}, term::Term) = SumOfTerms(term)
 Base.convert(::Type{T}, terms::SumOfTerms) where {T<:Number} = sum(convert.(T, terms.terms))
 (::Type{T})(terms::SumOfTerms) where {T<:Number} = convert(T, terms)
 Base.:+(x::SumOfTerms, y::SumOfTerms) = SumOfTerms(x.terms..., y.terms...)
