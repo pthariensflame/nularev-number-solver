@@ -1,6 +1,6 @@
 module NularevNumberSolver
 
-export Term, SumOfTerms, translate, joinparts
+export Term, SumOfTerms, translate, joinwords
 
 struct Term
     twos::UInt
@@ -77,7 +77,7 @@ function translate(terms::SumOfTerms)::Vector{String}
     return result
 end
 
-function joinparts(parts::Vector{String})::String
+function joinwords(parts::Vector{String})::String
     result::String, remaining = Iterators.peel(parts)
     for part in remaining
         # no need to worry about digraphs here because of the limited vocabulary
